@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Oswald:wght@600&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    display: inline-block;
+}
+
+.container {
+    display: grid;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 100vh 1500px 20vh;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        background: url(img/nuestropersonal.jpg);
+    }
+
+    nav {
+        background-color: red;
+        height: 20vh;
+        border-bottom: 5px solid black;
+    }
+
+    nav ul {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+    }
+
+    .social ul {
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .social a {
+        color: black;
+    }
+
+    main {
+        grid-area: main;
+        border-bottom: 5px solid #fff;
+        border-top: 5px solid #fff;
+    }
+
+    .seccion {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 30% 30% 30%;
+        grid-template-areas: "cartelUno"
+                             "cartelDos"
+                             "cartelTres";
+        align-content: space-around;
+        justify-content: center;
+        background: url(img/pattern-hero.png) #bc1e1e repeat;
+    }
+
+    #cartel-uno {
+        grid-area: cartelUno;
+    }
+
+    #cartel-dos {
+        grid-area: cartelDos;
+    }
+
+    #cartel-tres {
+        grid-area: cartelTres;
+    }
+
+    .cartel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .cartel i {
+        margin-top: 2rem;
+    }
+
+    .cartel h2 {
+        margin-bottom: 2rem;
+        border-bottom: 2px dotted black;
+    }
+
+    .cartel p {
+        width: 90%;
+    }
+    
+
+    footer {
+        grid-area: footer;
+        background: url(img/pattern-hero.png) #2e2828 repeat;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 1.3rem;
+    }
+    footer a {
+        color: white;
+    }
+
+    footer ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 10vh 90vh 500px 20vh;
+        grid-template-areas: "header"
+                             "imagen"
+                             "main"
+                             "footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    #imagen {
+        width: 100%;
+        height: 90vh;
+        grid-area: imagen;
+        background-image: url(img/pan.jpg);
+        object-fit: cover;
+        border-top: 5px solid black;
+    }
+
+    #container-header {
+        background-color: rgba(150,130,116,255);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    
+
+    nav {
+        width: 50vw;
+        height: 10vh;
+    }
+
+    .social {
+        width: 50vw;
+        height: 10vh;
+    }
+    
+    nav ul {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social ul {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 2rem;
+        margin-right: 2rem;
+    }
+
+    .social a {
+        color: white;
+    }
+
+    main {
+        grid-area: main;
+        border-top: 5px solid #000;
+        border-bottom: 5px solid #fff;
+    }
+
+    .seccion {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 90%;
+        grid-template-areas: "cartelUno cartelDos cartelTres";
+        justify-content: space-around;
+        align-content: space-around;
+        background: url(img/pattern-hero.png) #bc1e1e repeat;
+    }
+
+    .cartel {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .cartel i {
+        margin-top: 2rem;
+    }
+
+    .cartel h2 {
+        margin-bottom: 2rem;
+        border-bottom: 2px dotted black;
+    }
+
+    .cartel p {
+        width: 90%;
+    }
+
+    #cartel-uno {
+        grid-area: cartelUno;
+    }
+
+    #cartel-dos {
+        grid-area: cartelDos;
+    }
+
+    #cartel-tres {
+        grid-area: cartelTres;
+    }
+
+    footer {
+        grid-area: footer;
+        background: url(img/pattern-hero.png) #2e2828 repeat;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    footer p {
+        margin-left: 2rem;
+    }
+
+    #contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 2rem;
+        margin-right: 2rem;
+    }
+}

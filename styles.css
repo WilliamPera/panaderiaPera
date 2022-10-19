@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Oswald:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    display: inline-block;
+}
+
+.container {
+    display: grid;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 30vh 100% 20vh;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    header {
+        height: 100%;
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        background-color: red;
+        height: 20vh;
+        border-bottom: 5px solid black;
+    }
+
+    nav ul {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+    }
+
+    .social ul {
+        margin-top: 15px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .social a {
+        color: black;
+    }
+
+    main {
+        grid-area: main;
+        border-bottom: 5px solid #fff;
+        border-top: 5px solid #000;
+        background: url(img/pattern-hero.png) #bc1e1e repeat;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .section h1 {
+        margin-top: 2rem;
+        border-bottom: 2px dotted white;
+        margin-bottom: 2rem;
+    }
+
+    .section p {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    #video {
+        width: 90%;
+        height: 50%;
+    }
+
+    footer {
+        grid-area: footer;
+        background: url(img/pattern-hero.png) #2e2828 repeat;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 1.3rem;
+    }
+    footer a {
+        color: white;
+    }
+
+    footer ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 10vh 1000px 20vh;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+                    
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    #container-header {
+        background-color: rgba(150,130,116,255);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        width: 50vw;
+        height: 10vh;
+    }
+
+    .social {
+        width: 50vw;
+        height: 10vh;
+    }
+
+    nav ul {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social ul {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 2rem;
+        margin-right: 2rem;
+    }
+
+    .social a {
+        color: white;
+    }
+
+    main {
+        background: url(img/pattern-hero.png) #bc1e1e repeat;
+        border-top: 5px solid #000;
+        border-bottom: 5px solid #fff;
+    }
+
+    .section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section h1 {
+        border-bottom: 2px dotted black;
+        margin-bottom: 2rem;
+    }
+
+    .section p {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    #video {
+        width: 90%;
+    }
+
+    footer {
+        grid-area: footer;
+        background: url(img/pattern-hero.png) #2e2828 repeat;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    footer p {
+        margin-left: 2rem;
+    }
+
+    #contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 2rem;
+        margin-right: 2rem;
+    }
+}
