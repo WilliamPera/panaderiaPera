@@ -15,12 +15,12 @@ li {
     display: inline-block;
 }
 
-.container {
+.contenedor {
     display: grid;
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
+    .contenedor {
         grid-template-columns: 100%;
         grid-template-rows: 30vh 100% 20vh;
         grid-template-areas: "header"
@@ -137,9 +137,9 @@ li {
         font-size: 1rem;
     }
 
-    .container {
+    .contenedor {
         grid-template-columns: 100%;
-        grid-template-rows: 10vh 1000px 20vh;
+        grid-template-rows: 10vh 100% 20vh;
         grid-template-areas: "header"
                              "main"
                              "footer";
@@ -243,4 +243,9 @@ li {
         gap: 2rem;
         margin-right: 2rem;
     }
+
+    .carousel-item img {
+        height: 700px;  
+    }
+
 }
